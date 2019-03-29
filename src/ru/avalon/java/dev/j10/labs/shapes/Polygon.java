@@ -9,7 +9,7 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA">Многоугольник</a>
  */
-public interface Polygon {
+public abstract class Polygon implements Shape {
 
     /*
      * TODO: Закончить определение интерфейса 'Polygon'
@@ -18,16 +18,19 @@ public interface Polygon {
      *
      * 2. При необходимости, дополните структуру интерфеса.
      */
+    int rotation;
+    float a;
 
+    public Polygon() {
+        a = 1;
+        rotation = 0;
+    }
 
-    /**
-     * Возвращает периметр многоугольника.
-     * <p>
-     * Периметр многоугольника равен сумме длин его сторон.
-     *
-     * @return периметр многоугольника.
-     *
-     * @see <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D1%82%D1%80">Периметр</a>
-     */
-    float getPerimeter();
+    public Polygon(int rotation) {
+        this.rotation = rotation;
+    }
+   
+    public abstract float   getArea();        //Переопределение родительского метода getArea() без default
+    public abstract int     getRotation();      //Переопределение родительского метода getRotation() без default
+    public abstract float   getPerimeter();
 }
