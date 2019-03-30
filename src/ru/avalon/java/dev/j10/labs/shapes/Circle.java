@@ -34,7 +34,7 @@ public class Circle implements Ellipse{
     }
         
     public static Shape getInstance(){
-        Shape shape = new Circle((float)Math.random()*10);
+        Shape shape = new Circle((float)Math.random()*2);
         return shape;
     }
 }

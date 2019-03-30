@@ -13,8 +13,8 @@ public class Main {
 
         for(int i = 0; i < shapes.length; i++){
             shapes[i] = factory.getInstance();
-            System.out.println(shapes[i].getInfo());
-            System.out.println(shapes[i].getArea());              
+            System.out.print(shapes[i].getInfo());
+            System.out.println(" площадь: " + shapes[i].getArea());              
         }
         
         Shape maxArea = shapes[0];

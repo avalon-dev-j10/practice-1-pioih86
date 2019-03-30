@@ -53,8 +53,21 @@ public class Triangle extends Polygon {
     }
     
     public static Shape getInstance(){
-        Shape shape = new Triangle((float)Math.random()*10, (float)Math.random()*10,
-                (float)Math.random()*10, (int)(Math.random()*360));
+        float a, b, c;
+        Shape shape = null;
+        while ( true ){
+            a = (float)Math.random()*10;
+            b = (float)Math.random()*10;
+            c = (float)Math.random()*10;
+            if ( a + b > c && a + c > b && b + c > a ){ 
+                shape = new Triangle(a, b, c, (int)(Math.random()*360));
+                break;
+            }
+        }
+        
+        
+//        Shape shape = new Triangle((float)Math.random()*10, (float)Math.random()*10,
+//                (float)Math.random()*10, (int)(Math.random()*360));
         return shape;
     }
 }
