@@ -9,11 +9,50 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%BC%D0%B1">Ромб</a>
  */
-public class Rhombus {
+public class Rhombus extends Polygon{
 
-    /*
-     * TODO: Реализовать класс 'Rhombus'
-     * 1. Используйте наследование.
-     * 2. Реализуйте все абстрактные методы.
-     */
+    int angle;
+
+    public Rhombus(float a, int angle, int rotation) {
+        this.angle = angle % 360;
+        this.a = a;
+        this.rotation = rotation;
+    }
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Поле а надо инициалицизровать конструктором предка Polygon!
+        - Отсутствует один интерфейс Point и его реализация
+    */
+
+    public Rhombus() {
+        super();
+        this.angle = 90;
+    }
+    
+    public String getInfo(){
+        return "Ромб, a = " + a + ", угол = " + angle;        
+    }
+    
+    public float getPerimeter(){
+        return a*4;
+    }
+    
+    public int getRotation(){
+        return rotation;
+    }
+    
+    public float getArea(){
+        double area = a*a*(Math.sin((double)angle));
+        return (float)area;
+    }  
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - В sin надо передавать угол в радианах, а не в градусах!
+        - Метод getInstabce должен находиться в отдельном классе!
+    */
+    
+    public static Shape getInstance(){
+        Shape shape = new Rhombus((float)Math.random()*10, (int)(Math.random()*90), (int)(Math.random()*360));
+        return shape;
+    }
 }
