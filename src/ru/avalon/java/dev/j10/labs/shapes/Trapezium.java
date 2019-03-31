@@ -28,6 +28,11 @@ public class Trapezium extends Polygon{
         this.h = h;
         this.rotation = rotation;
     }
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Поле а надо инициалицизровать конструктором предка Polygon!
+        - Отсутствует один интерфейс Point и его реализация
+    */
 
     public Trapezium() {
         super();
@@ -53,6 +58,9 @@ public class Trapezium extends Polygon{
         return rotation;
     }    
     
+    /*  TODO (Проверка№1 ЛР№2)
+        - Метод getInstabce должен находиться в отдельном классе!
+    */
     public static Shape getInstance(){
         Shape shape = new Trapezium((float)Math.random()*10, (float)Math.random()*10,
                 (float)Math.random()*10, (float)Math.random()*10, (float)Math.random()*10, (int)(Math.random()*360));

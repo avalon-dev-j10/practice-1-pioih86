@@ -71,5 +71,7 @@ public class RandomShapeFactory implements ShapeFactory {
         return shape;
         }
             
-    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Это конечно не фабрика!
+    */
 }

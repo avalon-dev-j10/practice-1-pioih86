@@ -18,6 +18,11 @@ public class Rhombus extends Polygon{
         this.a = a;
         this.rotation = rotation;
     }
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Поле а надо инициалицизровать конструктором предка Polygon!
+        - Отсутствует один интерфейс Point и его реализация
+    */
 
     public Rhombus() {
         super();
@@ -40,6 +45,11 @@ public class Rhombus extends Polygon{
         double area = a*a*(Math.sin((double)angle));
         return (float)area;
     }  
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - В sin надо передавать угол в радианах, а не в градусах!
+        - Метод getInstabce должен находиться в отдельном классе!
+    */
     
     public static Shape getInstance(){
         Shape shape = new Rhombus((float)Math.random()*10, (int)(Math.random()*90), (int)(Math.random()*360));

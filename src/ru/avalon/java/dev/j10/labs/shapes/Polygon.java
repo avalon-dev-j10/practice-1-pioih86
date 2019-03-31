@@ -20,6 +20,10 @@ public abstract class Polygon implements Shape {
      */
     int rotation;
     float a;
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Не реализована инкапсуляция полей!
+    */
 
     public Polygon() {
         a = 1;

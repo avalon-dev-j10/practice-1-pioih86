@@ -19,6 +19,11 @@ public class Rectangle extends Polygon {
         this.rotation = rotation;
     }
 
+    /*  TODO (Проверка№1 ЛР№2)
+        - Поле а надо инициалицизровать конструктором предка Polygon!
+        - Отсутствует один интерфейс Point и его реализация
+    */
+    
     public Rectangle() {
         super();
         b = 1;
@@ -40,6 +45,9 @@ public class Rectangle extends Polygon {
         return rotation;
     }
     
+    /*  TODO (Проверка№1 ЛР№2)
+        - Метод getInstabce должен находиться в отдельном классе!
+    */
     public static Shape getInstance(){
         Shape shape = new Rectangle((float)Math.random()*10, (float)Math.random()*10,
                 (int)(Math.random()*360));

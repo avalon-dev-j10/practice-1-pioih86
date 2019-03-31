@@ -12,6 +12,10 @@ public class Circle implements Ellipse{
     
 //    static final String name = "Круг";
     float rad;
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Отсутствует один интерфейс Point и его реализация
+    */
 
     public Circle(float rad) {
         this.rad = rad;
@@ -32,7 +36,10 @@ public class Circle implements Ellipse{
     public float getArea(){
         return 2*PI*rad*rad;
     }
-        
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Метод getInstabce должен находиться в отдельном классе!
+    */    
     public static Shape getInstance(){
         Shape shape = new Circle((float)Math.random()*2);
         return shape;

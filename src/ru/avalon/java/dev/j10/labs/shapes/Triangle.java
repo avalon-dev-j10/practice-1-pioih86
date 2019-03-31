@@ -28,6 +28,11 @@ public class Triangle extends Polygon {
         this.c = c;
         this.rotation = rotation;
     }
+    
+    /*  TODO (Проверка№1 ЛР№2)
+        - Поле а надо инициалицизровать конструктором предка Polygon!
+        - Отсутствует один интерфейс Point и его реализация
+    */
 
     public Triangle() {
         super();
@@ -52,6 +57,9 @@ public class Triangle extends Polygon {
         return (float)Math.sqrt(p*(p-a)*(p-b)*(p-c));
     }
     
+    /*  TODO (Проверка№1 ЛР№2)
+        - Метод getInstabce должен находиться в отдельном классе!
+    */
     public static Shape getInstance(){
         float a, b, c;
         Shape shape = null;
